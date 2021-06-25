@@ -3,7 +3,7 @@ import {io} from 'socket.io-client';
 import Peer from 'simple-peer';
 
 const SocketContext = createContext();
-const socket = io("https://https://murmuring-sands-01418.herokuapp.com/");
+const socket = io("https://murmuring-sands-01418.herokuapp.com/");
 
 
 const ContextProvider  = ({children}) => {
