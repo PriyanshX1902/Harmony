@@ -5,7 +5,7 @@ import cors from 'cors';
 import route from './routes/sample.js';
 import {createServer} from 'http';
 import {Server} from 'socket.io';
-const port = process.env.port || 5000;
+const port = process.env.PORT || 5000;
 const server = createServer(app);
 const io = new Server(server, {
     cors: {
@@ -13,12 +13,12 @@ const io = new Server(server, {
         methods: ["GET", "POST"]
     }
 })
-app.use(
+/*app.use(
     cors({
         origin: 'http://localhost:3000/',
         credentials: true
     })
-);
+);*/
 io.on('connection', (socket)=>{
     socket.emit("me", socket.id);
 
